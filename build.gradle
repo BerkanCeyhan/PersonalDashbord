@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'org.knowm.xchange:xchange-coinbase:5.0.13'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+allprojects {
+    repositories {
+        google()
+    }
+}
