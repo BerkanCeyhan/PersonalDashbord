@@ -8,45 +8,87 @@
 </head>
 <body>
 <div class="container">
+    <div class="announcement-bar display-1">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-10">
+                <div class="d-flex flex-row">
+                <p class="lead m-1"><i class="fa-brands fa-ethereum fa-lg"></i> Ethereum <span th:text= "${ETH}"></span></p>
+                <p class="lead m-1"><i class="fa-brands fa-bitcoin fa-lg"></i> Bitcoin <span th:text= "${BTC}"></span></p>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col">
 
         </div>
         <div class="col-10">
-            <h1 class="display-1">Schönen <span th:text= "${Greeting}"></span> Berkan!</h1>
-            <h2 class=""><span class="badge bg-dark">
+            <header class="border-bottom m-b">
+            <h1 class="display-1 text-center">Schönen <span th:text= "${Greeting}"></span> Berkan!</h1>
+            <h2 class="text-center"><span class="badge bg-dark">
                 Hier ist dein Überblick! <i class="fa-solid fa-atom"> </i>
             </span></h2>
-            <section id="Coinbase" class="Coinbase">
-                <h3>Die heutigen Crypto Preise:</h3>
-                <div class="row">
-                    <div class="col">
-                       <p class="lead"><i class="fa-brands fa-bitcoin fa-lg"></i> Bitcoin <span th:text= "${BTC}"></span></p>
-                    </div>
-                    <div class="col-xl-9">
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                    </div>
+            </header>
+            <div class="row">
+                <div class="col">
+                    <section id="Mood" class="Mood">
+                        <h3>Wie geht es dir heute?</h3>
+                        <form>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1" name="moodradio" checked>
+                            <label class="form-check-label" for="inlineRadio1">😁</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineRadio2" value="option2" name="moodradio">
+                            <label class="form-check-label" for="inlineRadio2">😐</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineRadio3" value="option3" name="moodradio">
+                            <label class="form-check-label" for="inlineRadio3">😞</label>
+                        </div>
+                            <button class="btn btn-primary" type="submit" id="submit">Abschicken</button>
+                        </form>
+                    </section>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="lead"><i class="fa-brands fa-ethereum fa-lg"></i> Ethereum <span th:text= "${ETH}"></span></p>
-                    </div>
-                    <div class="col-xl-9">
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="alert alert-success d-flex align-items-center" role="alert">
-                            <i class="fa-regular fa-thumbs-up fa-lg"></i>
-                            <div>&nbspSieht gut aus!
+                <div class="col">
+                    <section id="Coinbase" class="Coinbase">
+                        <h3>Die heutigen Crypto Preise:</h3>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead"><i class="fa-brands fa-bitcoin fa-lg"></i> Bitcoin <span th:text= "${BTC}"></span></p>
+                            </div>
+                            <div class="col-xl">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-8">
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead"><i class="fa-brands fa-ethereum fa-lg"></i> Ethereum <span th:text= "${ETH}"></span></p>
+                            </div>
+                            <div class="col-xl">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <i class="fa-regular fa-thumbs-up fa-lg"></i>
+                                    <div>&nbspSieht gut aus!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xm">
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </div>
             <!--
             <section class="Instagram">
                 <h2>Deine Instagram Pages</h2>
@@ -59,12 +101,11 @@
             -->
             <section class="Weather">
                 <h3>Das Wetter für die nächsten Tage:</h3>
-                <img class="rounded" style="filter: invert(1)" src="https://wttr.in/Grevenbroich.png" width="100%">
+                <img alt="Wetter Applikation"class="rounded" style="filter: invert(1)" src="https://wttr.in/Grevenbroich.png" width="100%">
                 <a href="https://wttr.in/">🔗Grevenbroich Wetter</a>
             </section>
         </div>
         <div class="col">
-
         </div>
     </div>
     </div>

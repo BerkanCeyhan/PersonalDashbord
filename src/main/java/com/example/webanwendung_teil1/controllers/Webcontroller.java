@@ -1,6 +1,6 @@
 package com.example.webanwendung_teil1.controllers;
 
-import com.example.webanwendung_teil1.ApplicationService.Date;
+import com.example.webanwendung_teil1.ApplicationService.DateService;
 import com.example.webanwendung_teil1.ApplicationService.RestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +19,7 @@ public class Webcontroller {
     }
 
     @GetMapping("/")
-    public String index(Model model, Date today) throws IOException {
+    public String cryptoPrices(Model model, DateService today) throws IOException {
         String date = today.getDate();
         String bitcoinBuyPrice = restService.getBTC_EURPrice();
         String ethereumBuyPrice = restService.getETH_EURPrice();
@@ -28,8 +28,5 @@ public class Webcontroller {
         model.addAttribute("Greeting",date);
         return "index";
     }
-
-
-
 
 }
